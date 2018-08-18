@@ -23,18 +23,23 @@ describe("DatabaseHandler", () => {
     await dbHandler.insertToken(1, "aac")
   })
 
-  context("memberId: 2 has token: bba, bbb", () => {
+  context("memberId: 2 has token: bba", () => {
     before(async () => {
       await dbHandler.insertToken(2, "bba")
-      await dbHandler.insertToken(2, "bbb")
     })
 
-    it("can get token bba", async () => {
-      expect(await dbHandler.getTokens(2)).to.deep.equal(["bbb"])
+    it("can get token", async () => {
+      expect(await dbHandler.getTokens(2)).to.deep.equal(["bba"])
+    })
+  })
+
+  context("memberId: 3 has token: cca", () => {
+    before(async () => {
+      await dbHandler.insertToken(3, "cca")
     })
 
-    it("can delete token bbb", async () => {
-      await dbHandler.deleteToken(2, "bba")
+    it("can delete token", async () => {
+      await dbHandler.deleteToken(3, "cca")
     })
   })
 })
