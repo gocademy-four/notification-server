@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "es2015"
+    ],
+    "declaration": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "downlevelIteration": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+
+    /* Module Resolution Options */
+    "moduleResolution": "node"
+  }
+}
