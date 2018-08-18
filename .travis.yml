@@ -2,16 +2,17 @@ language: node_js
 cache: yarn
 
 node_js: "10"
+services:
+  - postgresql
 
+before_script:
+  - psql -c 'CREATE DATABASE test_db;' -U postgres
+  - export DATABASE_URL='postgres://postgres@localhost/test_db'
 after_success:
   - npm install --no-save coveralls
   - npx nyc report --reporter=text-lcov | npx coveralls
 
 deploy:
-  provider: npm
-  email: nieltansah+npmjs@gmail.com
-  api_key: $NPM_API_KEY
-
-  skip_cleanup: true
-  on:
-    tags: true
+  provider: heroku
+  app: gocademy-tutor-notify-server
+  api_key: $HEROKU_API_KEY
