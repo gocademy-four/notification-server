@@ -16,3 +16,4 @@ deploy:
   provider: heroku
   app: gocademy-tutor-notify-server
   api_key: $HEROKU_API_KEY
+  skip_cleanup: true

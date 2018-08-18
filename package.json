@@ -29,7 +29,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "$npm_execpath run build && node dist",
+    "start": "node dist",
     "clean": "rm --verbose -r dist || true",
     "lint": "tslint -p . --fix",
     "precommit": "lint-staged",
