@@ -40,12 +40,17 @@ export function parseNotifyEndpoint(ctx: Context) {
     ctx.throw(400, { error: "Request body is required" })
   }
 
-  if (!body.message) {
-    ctx.throw(400, { error: "Message is required" })
+  if (!body.body) {
+    ctx.throw(400, { error: "Body is required" })
+  }
+
+  if (!body.data) {
+    ctx.throw(400, { error: "Data is required" })
   }
 
   return {
     id: params.id,
-    token: body.message
+    body: body.body,
+    data: body.data
   }
 }
