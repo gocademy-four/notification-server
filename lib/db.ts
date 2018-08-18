@@ -15,9 +15,10 @@ export class DatabaseHandler {
   async migrate() {
     await this.client.query(
       "CREATE TABLE IF NOT EXISTS MemberToken (" +
-        "id integer PRIMARY KEY," +
+        "id integer," +
         "token varchar(255)" +
-        ")"
+        ");" +
+        "CREATE INDEX IF NOT EXISTS MemberTokenIdxId ON MemberToken;"
     )
   }
 
