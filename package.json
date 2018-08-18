@@ -57,8 +57,10 @@
     "all": true
   },
   "dependencies": {
+    "@types/pg": "^7.4.10",
     "koa": "^2.5.2",
     "koa-body": "^4.0.4",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "pg": "^7.4.3"
   }
 }
