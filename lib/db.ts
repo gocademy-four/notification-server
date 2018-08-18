@@ -22,7 +22,7 @@ export class DatabaseHandler {
         "id integer," +
         "token varchar(255)" +
         ");" +
-        "CREATE INDEX IF NOT EXISTS MemberTokenIdxId ON MemberToken;"
+        "CREATE INDEX IF NOT EXISTS MemberTokenIdxId ON MemberToken(id);"
     )
   }
 
