@@ -21,8 +21,7 @@ export class DatabaseHandler {
       "CREATE TABLE IF NOT EXISTS MemberToken (" +
         "id integer," +
         "token varchar(255)" +
-        ");" +
-        "CREATE INDEX IF NOT EXISTS MemberTokenIdxId ON MemberToken(id);"
+        ");"
     )
   }
 
