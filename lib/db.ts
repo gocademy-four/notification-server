@@ -12,6 +12,10 @@ export class DatabaseHandler {
     this.client.connect()
   }
 
+  async close() {
+    await this.client.end()
+  }
+
   async migrate() {
     await this.client.query(
       "CREATE TABLE IF NOT EXISTS MemberToken (" +

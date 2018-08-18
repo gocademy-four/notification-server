@@ -9,6 +9,10 @@ describe("DatabaseHandler", () => {
     dbHandler = new DatabaseHandler()
   })
 
+  after(async () => {
+    await dbHandler.close()
+  })
+
   it("can migrate tables", async () => {
     await dbHandler.migrate()
   })
