@@ -13,6 +13,7 @@
     "@types/koa-router": "^7.0.31",
     "@types/mocha": "^5.2.3",
     "@types/node": "^10.7.1",
+    "@types/pg": "^7.4.10",
     "chai": "^4.1.2",
     "husky": "^0.14.3",
     "is-callable": "^1.1.4",
@@ -57,7 +58,7 @@
     "all": true
   },
   "dependencies": {
-    "@types/pg": "^7.4.10",
+    "expo-server-sdk": "^3.0.1",
     "koa": "^2.5.2",
     "koa-body": "^4.0.4",
     "koa-router": "^7.4.0",
